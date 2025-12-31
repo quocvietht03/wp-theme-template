@@ -4,7 +4,7 @@ $category = get_the_terms($post_id, 'category');
 ?>
 <article <?php post_class('bt-post'); ?>>
   <div class="bt-post--inner">
-  <?php echo __THEME_SLUG__post_cover_featured_render('medium_large'); ?>
+  <?php echo __THEME_SLUG___post_cover_featured_render('medium_large'); ?>
     <div class="bt-post--content">
       <div class="bt-post--category">
         <?php
@@ -15,12 +15,12 @@ $category = get_the_terms($post_id, 'category');
         ?>
       </div>
 
-      <?php echo __THEME_SLUG__post_title_render(); ?>
+      <?php echo __THEME_SLUG___post_title_render(); ?>
     </div>
     <div class="bt-post--info">
         <?php
-        echo __THEME_SLUG__post_publish_render();
-        echo __THEME_SLUG__author_icon_render();
+        echo __THEME_SLUG___post_publish_render();
+        echo __THEME_SLUG___author_icon_render();
         ?>
       </div>
   </div>

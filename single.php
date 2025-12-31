@@ -15,7 +15,7 @@ get_header();
 				$home_text = 'Home';
 				$delimiter = '/';
 				echo '<div class="bt-breadcrumb">';
-				echo __THEME_SLUG__page_breadcrumb($home_text, $delimiter);
+				echo __THEME_SLUG___page_breadcrumb($home_text, $delimiter);
 				echo '</div>';
 				?>
 			</div>
@@ -34,12 +34,12 @@ get_header();
 						</div>
 						<div class="bt-main-actions">
 							<?php
-							echo __THEME_SLUG__tags_render();
-							echo __THEME_SLUG__share_render();
+							echo __THEME_SLUG___tags_render();
+							echo __THEME_SLUG___share_render();
 							?>
 						</div>
 					<?php
-						__THEME_SLUG__post_nav();
+						__THEME_SLUG___post_nav();
 
 						// If comments are open or we have at least one comment, load up the comment template.
 						if (comments_open() || get_comments_number()) comments_template();
@@ -55,7 +55,7 @@ get_header();
 			</div>
 		</div>
 	</div>
-	<?php echo __THEME_SLUG__related_posts(); ?>
+	<?php echo __THEME_SLUG___related_posts(); ?>
 </main><!-- #main -->
 
 <?php get_footer(); ?>

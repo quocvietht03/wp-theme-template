@@ -1,12 +1,12 @@
 <?php
 
-namespace __THEME_SLUG__ElementorWidgets\Widgets\__THEME_SLUG__SiteInformation;
+namespace __NAMESPACE__ElementorWidgets\Widgets\__NAMESPACE__SiteInformation;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
-class Widget___THEME_SLUG__SiteInformation extends Widget_Base
+class Widget___NAMESPACE__SiteInformation extends Widget_Base
 {
 
 	public function get_name()

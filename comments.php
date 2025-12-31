@@ -30,7 +30,7 @@ if (post_password_required()) {
 			'style'      => 'div',
 			'short_ping' => true,
 			'avatar_size' => 150,
-			'callback' => '__THEME_SLUG__custom_comment',
+			'callback' => '__THEME_SLUG___custom_comment',
 		));
 		?>
 

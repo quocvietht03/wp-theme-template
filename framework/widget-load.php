@@ -1,6 +1,6 @@
 <?php
 
-namespace __THEME_SLUG__ElementorWidgets;
+namespace __NAMESPACE__ElementorWidgets;
 
 /**
  * Class ElementorWidgets
@@ -149,11 +149,11 @@ class ElementorWidgets
 		$this->include_widgets_files();
 
 		// Register Widgets
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__THEME_SLUG__MobileMenu\Widget___THEME_SLUG__MobileMenu());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__THEME_SLUG__SiteInformation\Widget___THEME_SLUG__SiteInformation());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__THEME_SLUG__SiteSocial\Widget___THEME_SLUG__SiteSocial());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__THEME_SLUG__SiteCopyright\Widget___THEME_SLUG__SiteCopyright());
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__THEME_SLUG__PageBreadcrumb\Widget___THEME_SLUG__PageBreadcrumb());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__NAMESPACE__MobileMenu\Widget___NAMESPACE__MobileMenu());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__NAMESPACE__SiteInformation\Widget___NAMESPACE__SiteInformation());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__NAMESPACE__SiteSocial\Widget___NAMESPACE__SiteSocial());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__NAMESPACE__SiteCopyright\Widget___NAMESPACE__SiteCopyright());
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Widgets\__NAMESPACE__PageBreadcrumb\Widget___NAMESPACE__PageBreadcrumb());
 	}
 
 	/**

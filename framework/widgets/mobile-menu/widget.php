@@ -1,12 +1,12 @@
 <?php
 
-namespace __THEME_SLUG__ElementorWidgets\Widgets\__THEME_SLUG__MobileMenu;
+namespace __NAMESPACE__ElementorWidgets\Widgets\__NAMESPACE__MobileMenu;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
-class Widget___THEME_SLUG__MobileMenu extends Widget_Base
+class Widget___NAMESPACE__MobileMenu extends Widget_Base
 {
 	private function get_available_menus() {
 		$menus = wp_get_nav_menus();

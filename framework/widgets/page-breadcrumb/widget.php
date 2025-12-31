@@ -1,6 +1,6 @@
 <?php
 
-namespace __THEME_SLUG__ElementorWidgets\Widgets\__THEME_SLUG__PageBreadcrumb;
+namespace __NAMESPACE__ElementorWidgets\Widgets\__NAMESPACE__PageBreadcrumb;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -10,7 +10,7 @@ use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 
-class Widget___THEME_SLUG__PageBreadcrumb extends Widget_Base
+class Widget___NAMESPACE__PageBreadcrumb extends Widget_Base
 {
 
 	public function get_name()

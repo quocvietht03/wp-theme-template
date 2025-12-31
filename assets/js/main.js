@@ -2,7 +2,7 @@
 	"use strict";
 
 	/* Toggle submenu align */
-	function __THEME_SLUG__SubmenuAuto() {
+	function __NAMESPACE__SubmenuAuto() {
 		if ($('.bt-site-header .bt-container').length > 0) {
 			var container = $('.bt-site-header .bt-container'),
 				containerInfo = { left: container.offset().left, width: container.innerWidth() },
@@ -27,7 +27,7 @@
 	}
 
 	/* Toggle menu mobile */
-	function __THEME_SLUG__ToggleMenuMobile() {
+	function __NAMESPACE__ToggleMenuMobile() {
 		$('.bt-site-header .bt-menu-toggle').on('click', function (e) {
 			e.preventDefault();
 
@@ -42,7 +42,7 @@
 	}
 
 	/* Toggle sub menu mobile */
-	function __THEME_SLUG__ToggleSubMenuMobile() {
+	function __NAMESPACE__ToggleSubMenuMobile() {
 		var hasChildren = $('.bt-site-header .page_item_has_children, .bt-site-header .menu-item-has-children');
 
 		hasChildren.each(function () {
@@ -59,7 +59,7 @@
 	}
 
 	/* Validation form comment */
-	function __THEME_SLUG__CommentValidation() {
+	function __NAMESPACE__CommentValidation() {
 		if ($('#bt_comment_form').length) {
 			jQuery('#bt_comment_form').validate({
 				rules: {
@@ -108,7 +108,7 @@
 	}
 
 	/* Copyright Current Year */
-	function __THEME_SLUG__CopyrightCurrentYear() {
+	function __NAMESPACE__CopyrightCurrentYear() {
 		var searchTerm = '{Year}',
 			replaceWith = new Date().getFullYear();
 
@@ -116,32 +116,9 @@
 			this.innerHTML = this.innerHTML.replace(searchTerm, replaceWith);
 		});
 	}
-	/* share button wishlist page and compare page */
-	function __THEME_SLUG__ShareLocalStorage(datashare = []) {
-		if (!datashare) {
-			const url = new URL(window.location.href);
-			url.searchParams.delete('datashare');
-			window.history.pushState(null, '', url.toString());
-			return;
-		}
-		const url = new URL(window.location.href);
-		url.searchParams.set('datashare', datashare);
-		window.history.pushState(null, '', url.toString());
-		$('.bt-post-share a').each(function () {
-			var currentHref = $(this).attr('href');
-			// Handle both Facebook and Pinterest share links
-			if (currentHref.includes('facebook.com/sharer')) {
-				var newHref = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href);
-			} else if (currentHref.includes('pinterest.com/pin')) {
-				var newHref = 'https://pinterest.com/pin/create/button/?url=' + encodeURIComponent(window.location.href);
-			} else {
-				var newHref = currentHref.replace(/url=[^&]+/, 'url=' + encodeURIComponent(window.location.href));
-			}
-			$(this).attr('href', newHref);
-		});
-	}
+	
 	/* backtotop */
-	function __THEME_SLUG__BackToTop() {
+	function __NAMESPACE__BackToTop() {
 		const $backToTop = $('.bt-back-to-top');
 		if ($backToTop.length > 0) {
 			$(window).on('scroll', function () {
@@ -160,19 +137,19 @@
 	}
 
 	jQuery(document).ready(function ($) {
-		__THEME_SLUG__SubmenuAuto();
-		__THEME_SLUG__ToggleMenuMobile();
-		__THEME_SLUG__ToggleSubMenuMobile();
-		__THEME_SLUG__CommentValidation();
-		__THEME_SLUG__CopyrightCurrentYear();
-		__THEME_SLUG__BackToTop();
+		__NAMESPACE__SubmenuAuto();
+		__NAMESPACE__ToggleMenuMobile();
+		__NAMESPACE__ToggleSubMenuMobile();
+		__NAMESPACE__CommentValidation();
+		__NAMESPACE__CopyrightCurrentYear();
+		__NAMESPACE__BackToTop();
 
 	});
 	
 	jQuery(window).on('resize', function () {
-		__THEME_SLUG__SubmenuAuto();
-		__THEME_SLUG__UpdateBodyWidthVariable();
-		__THEME_SLUG__HandleGridViewResize();
+		__NAMESPACE__SubmenuAuto();
+		__NAMESPACE__UpdateBodyWidthVariable();
+		__NAMESPACE__HandleGridViewResize();
 	});
 	
 	jQuery(window).on('scroll', function () {

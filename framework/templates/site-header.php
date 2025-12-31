@@ -18,7 +18,7 @@
           } else {
           ?>
             <a href="<?php echo esc_url(home_url('/')); ?>">
-              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/site-logo.png'); ?>" alt="__THEME_SLUG__ Logo" />
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/site-logo.png'); ?>" alt="__THEME_NAME__ Logo" />
             </a>
           <?php
           }

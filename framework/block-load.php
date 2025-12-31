@@ -1,5 +1,5 @@
 <?php
-function __THEME_SLUG__register_layout_category($categories)
+function __THEME_SLUG___register_layout_category($categories)
 {
 
     $categories[] = array(
@@ -9,9 +9,9 @@ function __THEME_SLUG__register_layout_category($categories)
 
     return $categories;
 }
-add_filter('block_categories_all', '__THEME_SLUG__register_layout_category');
+add_filter('block_categories_all', '__THEME_SLUG___register_layout_category');
 
-function __THEME_SLUG__acf_init()
+function __THEME_SLUG___acf_init()
 {
 
     // check function exists
@@ -20,8 +20,8 @@ function __THEME_SLUG__acf_init()
             'name'              => 'widget-recent-posts',
             'title'             => __('Widget - Recent Posts', '__TEXT_DOMAIN__'),
             'description'       => __('Widget - Recent Posts block.', '__TEXT_DOMAIN__'),
-            'render_callback'   => '__THEME_SLUG__acf_block_render_callback',
-            // 'enqueue_assets' => '__THEME_SLUG__acf_block_assets_callback',
+            'render_callback'   => '__THEME_SLUG___acf_block_render_callback',
+            // 'enqueue_assets' => '__THEME_SLUG___acf_block_assets_callback',
             'category'          => 'bt-custom-block',
             'icon'              => '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0V0z" /><path d="M19 13H5v-2h14v2z" /></svg>',
             'keywords'          => array('Recent Posts', 'Posts'),
@@ -29,9 +29,9 @@ function __THEME_SLUG__acf_init()
         
     }
 }
-add_action('acf/init', '__THEME_SLUG__acf_init');
+add_action('acf/init', '__THEME_SLUG___acf_init');
 
-function __THEME_SLUG__acf_block_render_callback($block)
+function __THEME_SLUG___acf_block_render_callback($block)
 {
     // convert name ("acf/testimonial") into path friendly slug ("testimonial")
     $slug = str_replace('acf/', '', $block['name']);
@@ -42,7 +42,7 @@ function __THEME_SLUG__acf_block_render_callback($block)
     }
 }
 
-function __THEME_SLUG__acf_block_assets_callback($block)
+function __THEME_SLUG___acf_block_assets_callback($block)
 {
 
     // convert name ("acf/block-name") into path friendly slug ("block-name")

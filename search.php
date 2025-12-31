@@ -22,7 +22,7 @@ get_template_part('framework/templates/site', 'titlebar');
 					?>
 				</div>
 			<?php
-				__THEME_SLUG__paging_nav();
+				__THEME_SLUG___paging_nav();
 			} else {
 				get_template_part('framework/templates/post', 'none');
 			}

@@ -1,11 +1,11 @@
 <?php
 /* Count post view. */
-if (!function_exists('__THEME_SLUG__set_count_view')) {
-  function __THEME_SLUG__set_count_view()
+if (!function_exists('__THEME_SLUG___set_count_view')) {
+  function __THEME_SLUG___set_count_view()
   {
     $post_id = get_the_ID();
 
-    if (is_single() && !empty($post_id) && !isset($_COOKIE['__THEME_SLUG__post_view_' . $post_id])) {
+    if (is_single() && !empty($post_id) && !isset($_COOKIE['__THEME_SLUG___post_view_' . $post_id])) {
       $views = get_post_meta($post_id, '_post_count_views', true);
       $views = $views ? $views : 0;
       $views++;
@@ -13,15 +13,15 @@ if (!function_exists('__THEME_SLUG__set_count_view')) {
       update_post_meta($post_id, '_post_count_views', $views);
 
       /* set cookie. */
-      setcookie('__THEME_SLUG__post_view_' . $post_id, $post_id, time() * 20, '/');
+      setcookie('__THEME_SLUG___post_view_' . $post_id, $post_id, time() * 20, '/');
     }
   }
 }
-add_action('wp', '__THEME_SLUG__set_count_view');
+add_action('wp', '__THEME_SLUG___set_count_view');
 
 /* Post count view */
-if (!function_exists('__THEME_SLUG__get_count_view')) {
-  function __THEME_SLUG__get_count_view()
+if (!function_exists('__THEME_SLUG___get_count_view')) {
+  function __THEME_SLUG___get_count_view()
   {
     $post_id = get_the_ID();
     $views = get_post_meta($post_id, '_post_count_views', true);
@@ -33,8 +33,8 @@ if (!function_exists('__THEME_SLUG__get_count_view')) {
 }
 
 /* Post Reading */
-if (!function_exists('__THEME_SLUG__reading_time_render')) {
-  function __THEME_SLUG__reading_time_render()
+if (!function_exists('__THEME_SLUG___reading_time_render')) {
+  function __THEME_SLUG___reading_time_render()
   {
     $content = get_the_content();
     $word_count = str_word_count(strip_tags($content));
@@ -45,8 +45,8 @@ if (!function_exists('__THEME_SLUG__reading_time_render')) {
 }
 
 /* Single Post Title */
-if (!function_exists('__THEME_SLUG__single_post_title_render')) {
-  function __THEME_SLUG__single_post_title_render()
+if (!function_exists('__THEME_SLUG___single_post_title_render')) {
+  function __THEME_SLUG___single_post_title_render()
   {
     ob_start();
 ?>
@@ -60,8 +60,8 @@ if (!function_exists('__THEME_SLUG__single_post_title_render')) {
 }
 
 /* Post Title */
-if (!function_exists('__THEME_SLUG__post_title_render')) {
-  function __THEME_SLUG__post_title_render()
+if (!function_exists('__THEME_SLUG___post_title_render')) {
+  function __THEME_SLUG___post_title_render()
   {
     ob_start();
   ?>
@@ -75,8 +75,8 @@ if (!function_exists('__THEME_SLUG__post_title_render')) {
 }
 
 /* Post Featured */
-if (!function_exists('__THEME_SLUG__post_featured_render')) {
-  function __THEME_SLUG__post_featured_render($image_size = 'full')
+if (!function_exists('__THEME_SLUG___post_featured_render')) {
+  function __THEME_SLUG___post_featured_render($image_size = 'full')
   {
     ob_start();
 
@@ -110,8 +110,8 @@ if (!function_exists('__THEME_SLUG__post_featured_render')) {
 }
 
 /* Post Cover Featured */
-if (!function_exists('__THEME_SLUG__post_cover_featured_render')) {
-  function __THEME_SLUG__post_cover_featured_render($image_size = 'full')
+if (!function_exists('__THEME_SLUG___post_cover_featured_render')) {
+  function __THEME_SLUG___post_cover_featured_render($image_size = 'full')
   {
     ob_start();
     ?>
@@ -133,8 +133,8 @@ if (!function_exists('__THEME_SLUG__post_cover_featured_render')) {
 }
 
 /* Post Publish */
-if (!function_exists('__THEME_SLUG__post_publish_render')) {
-  function __THEME_SLUG__post_publish_render($format = null)
+if (!function_exists('__THEME_SLUG___post_publish_render')) {
+  function __THEME_SLUG___post_publish_render($format = null)
   {
     ob_start();
     if ($format) {
@@ -153,8 +153,8 @@ if (!function_exists('__THEME_SLUG__post_publish_render')) {
 }
 
 /* Post Short Meta */
-if (!function_exists('__THEME_SLUG__post_short_meta_render')) {
-  function __THEME_SLUG__post_short_meta_render()
+if (!function_exists('__THEME_SLUG___post_short_meta_render')) {
+  function __THEME_SLUG___post_short_meta_render()
   {
     ob_start();
 
@@ -162,7 +162,7 @@ if (!function_exists('__THEME_SLUG__post_short_meta_render')) {
     <div class="bt-post--meta">
       <?php
       the_terms(get_the_ID(), 'category', '<div class="bt-post-cat">', ', ', '</div>');
-      echo __THEME_SLUG__reading_time_render();
+      echo __THEME_SLUG___reading_time_render();
       ?>
     </div>
   <?php
@@ -172,8 +172,8 @@ if (!function_exists('__THEME_SLUG__post_short_meta_render')) {
 }
 
 /* Post Meta */
-if (!function_exists('__THEME_SLUG__post_meta_render')) {
-  function __THEME_SLUG__post_meta_render()
+if (!function_exists('__THEME_SLUG___post_meta_render')) {
+  function __THEME_SLUG___post_meta_render()
   {
     ob_start();
     $post_id = get_the_ID();
@@ -197,8 +197,8 @@ if (!function_exists('__THEME_SLUG__post_meta_render')) {
   }
 }
 /* Post Meta Single Post */
-if (!function_exists('__THEME_SLUG__post_meta_single_render')) {
-  function __THEME_SLUG__post_meta_single_render()
+if (!function_exists('__THEME_SLUG___post_meta_single_render')) {
+  function __THEME_SLUG___post_meta_single_render()
   {
     ob_start();
 
@@ -224,8 +224,8 @@ if (!function_exists('__THEME_SLUG__post_meta_single_render')) {
   }
 }
 /* Post Category */
-if (!function_exists('__THEME_SLUG__post_category_render')) {
-  function __THEME_SLUG__post_category_render()
+if (!function_exists('__THEME_SLUG___post_category_render')) {
+  function __THEME_SLUG___post_category_render()
   {
     $post_id = get_the_ID();
     $categorys = get_the_terms($post_id, 'category');
@@ -245,8 +245,8 @@ if (!function_exists('__THEME_SLUG__post_category_render')) {
   }
 }
 /* Post Excerpt */
-if (!function_exists('__THEME_SLUG__post_excerpt_render')) {
-  function __THEME_SLUG__post_excerpt_render()
+if (!function_exists('__THEME_SLUG___post_excerpt_render')) {
+  function __THEME_SLUG___post_excerpt_render()
   {
     ob_start();
     ?>
@@ -257,8 +257,8 @@ if (!function_exists('__THEME_SLUG__post_excerpt_render')) {
 }
 
 /* Post Content */
-if (!function_exists('__THEME_SLUG__post_content_render')) {
-  function __THEME_SLUG__post_content_render()
+if (!function_exists('__THEME_SLUG___post_content_render')) {
+  function __THEME_SLUG___post_content_render()
   {
     ob_start();
     if (is_single()) {
@@ -284,8 +284,8 @@ if (!function_exists('__THEME_SLUG__post_content_render')) {
 }
 
 /* Post tag */
-if (!function_exists('__THEME_SLUG__tags_render')) {
-  function __THEME_SLUG__tags_render()
+if (!function_exists('__THEME_SLUG___tags_render')) {
+  function __THEME_SLUG___tags_render()
   {
     ob_start();
     if (has_tag()) {
@@ -305,8 +305,8 @@ if (!function_exists('__THEME_SLUG__tags_render')) {
 }
 
 /* Post share */
-if (!function_exists('__THEME_SLUG__share_render')) {
-  function __THEME_SLUG__share_render()
+if (!function_exists('__THEME_SLUG___share_render')) {
+  function __THEME_SLUG___share_render()
   {
 
     $social_item = array();
@@ -361,8 +361,8 @@ if (!function_exists('__THEME_SLUG__share_render')) {
 }
 
 /* Post Button */
-if (!function_exists('__THEME_SLUG__post_button_render')) {
-  function __THEME_SLUG__post_button_render($text)
+if (!function_exists('__THEME_SLUG___post_button_render')) {
+  function __THEME_SLUG___post_button_render($text)
   { ?>
     <div class="bt-post--button">
       <a href="<?php echo esc_url(get_permalink()) ?>">
@@ -372,8 +372,8 @@ if (!function_exists('__THEME_SLUG__post_button_render')) {
     <?php }
 }
 /* Author Icon */
-if (!function_exists('__THEME_SLUG__author_icon_render')) {
-  function __THEME_SLUG__author_icon_render()
+if (!function_exists('__THEME_SLUG___author_icon_render')) {
+  function __THEME_SLUG___author_icon_render()
   { ?>
     <div class="bt-post-author-icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -385,8 +385,8 @@ if (!function_exists('__THEME_SLUG__author_icon_render')) {
   <?php }
 }
 /* Author with avatar */
-if (!function_exists('__THEME_SLUG__author_w_avatar')) {
-  function __THEME_SLUG__author_w_avatar()
+if (!function_exists('__THEME_SLUG___author_w_avatar')) {
+  function __THEME_SLUG___author_w_avatar()
   {
     $author_id = get_the_author_meta('ID');
     if (function_exists('get_field')) {
@@ -415,8 +415,8 @@ if (!function_exists('__THEME_SLUG__author_w_avatar')) {
   <?php }
 }
 /* Author */
-if (!function_exists('__THEME_SLUG__author_render')) {
-  function __THEME_SLUG__author_render()
+if (!function_exists('__THEME_SLUG___author_render')) {
+  function __THEME_SLUG___author_render()
   {
     $author_id = get_the_author_meta('ID');
     $desc = get_the_author_meta('description');
@@ -510,8 +510,8 @@ if (!function_exists('__THEME_SLUG__author_render')) {
 
 
 /* Related posts */
-if (!function_exists('__THEME_SLUG__related_posts')) {
-  function __THEME_SLUG__related_posts()
+if (!function_exists('__THEME_SLUG___related_posts')) {
+  function __THEME_SLUG___related_posts()
   {
     if (function_exists('get_field')) {
       $enable_related_posts = get_field('enable_related_posts', 'options');
@@ -564,7 +564,7 @@ if (!function_exists('__THEME_SLUG__related_posts')) {
             <div class="bt-related-posts--list">
               <?php
               while ($list_posts->have_posts()) : $list_posts->the_post();
-                get_template_part('framework/templates/post', 'style', array('image-size' => "large"));
+                get_template_part('framework/templates/post', 'card', array('image-size' => "large"));
               endwhile;
               wp_reset_postdata();
               ?>
@@ -579,7 +579,7 @@ if (!function_exists('__THEME_SLUG__related_posts')) {
 }
 
 //Comment Field Order
-function __THEME_SLUG__comment_fields_custom_order($fields)
+function __THEME_SLUG___comment_fields_custom_order($fields)
 {
   $comment_field = $fields['comment'];
   $author_field = $fields['author'];
@@ -598,11 +598,11 @@ function __THEME_SLUG__comment_fields_custom_order($fields)
   // done ordering, now return the fields:
   return $fields;
 }
-add_filter('comment_form_fields', '__THEME_SLUG__comment_fields_custom_order');
+add_filter('comment_form_fields', '__THEME_SLUG___comment_fields_custom_order');
 
 /* Custom comment list */
-if (!function_exists('__THEME_SLUG__custom_comment')) {
-  function __THEME_SLUG__custom_comment($comment, $args, $depth)
+if (!function_exists('__THEME_SLUG___custom_comment')) {
+  function __THEME_SLUG___custom_comment($comment, $args, $depth)
   {
     $GLOBALS['comment'] = $comment;
     extract($args, EXTR_SKIP);

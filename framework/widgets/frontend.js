@@ -5,7 +5,7 @@
 	**/
 
 	/* Submenu toggle */
-	const __THEME_SLUG__MobileMenuHandler = function ($scope, $) {
+	const __NAMESPACE__MobileMenuHandler = function ($scope, $) {
 		var hasChildren = $scope.find('.menu-item-has-children');
 
 		hasChildren.each(function () {
@@ -32,7 +32,7 @@
 
 	// Make sure you run this code under Elementor.
 	$(window).on('elementor/frontend/init', function () {
-		elementorFrontend.hooks.addAction('frontend/element_ready/bt-mobile-menu.default', __THEME_SLUG__MobileMenuHandler);
+		elementorFrontend.hooks.addAction('frontend/element_ready/bt-mobile-menu.default', __NAMESPACE__MobileMenuHandler);
 		
 	});
 

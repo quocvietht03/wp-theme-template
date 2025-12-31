@@ -2,8 +2,8 @@
 if (! isset($content_width)) $content_width = 900;
 if (is_singular()) wp_enqueue_script("comment-reply");
 
-if (! function_exists('__THEME_SLUG__setup')) {
-	function __THEME_SLUG__setup()
+if (! function_exists('__THEME_SLUG___setup')) {
+	function __THEME_SLUG___setup()
 	{
 		/* Load textdomain */
 		load_theme_textdomain('__TEXT_DOMAIN__', get_template_directory() . '/languages');
@@ -44,22 +44,22 @@ if (! function_exists('__THEME_SLUG__setup')) {
 		add_theme_support('align-wide');
 
 		/* This theme allows users to set a custom background. */
-		add_theme_support('custom-background', apply_filters('__THEME_SLUG__custom_background_args', array(
+		add_theme_support('custom-background', apply_filters('__THEME_SLUG___custom_background_args', array(
 			'default-color' => 'f5f5f5',
 		)));
 
 		/* Add support for featured content. */
 		add_theme_support('featured-content', array(
-			'featured_content_filter' => '__THEME_SLUG__get_featured_posts',
+			'featured_content_filter' => '__THEME_SLUG___get_featured_posts',
 			'max_posts' => 6,
 		));
 	}
 }
-add_action('after_setup_theme', '__THEME_SLUG__setup');
+add_action('after_setup_theme', '__THEME_SLUG___setup');
 
 /* Logo */
-if (!function_exists('__THEME_SLUG__logo')) {
-	function __THEME_SLUG__logo($url = '', $height = 30)
+if (!function_exists('__THEME_SLUG___logo')) {
+	function __THEME_SLUG___logo($url = '', $height = 30)
 	{
 		if (!$url) {
 			$url = get_template_directory_uri() . '/assets/images/site-logo.png';
@@ -69,8 +69,8 @@ if (!function_exists('__THEME_SLUG__logo')) {
 }
 
 /* Nav Menu */
-if (!function_exists('__THEME_SLUG__nav_menu')) {
-	function __THEME_SLUG__nav_menu($menu_slug = '', $theme_location = '', $container_class = '')
+if (!function_exists('__THEME_SLUG___nav_menu')) {
+	function __THEME_SLUG___nav_menu($menu_slug = '', $theme_location = '', $container_class = '')
 	{
 		if (has_nav_menu($theme_location) || $menu_slug) {
 			wp_nav_menu(array(
@@ -87,8 +87,8 @@ if (!function_exists('__THEME_SLUG__nav_menu')) {
 	}
 }
 /* Page title */
-if (!function_exists('__THEME_SLUG__page_title')) {
-	function __THEME_SLUG__page_title()
+if (!function_exists('__THEME_SLUG___page_title')) {
+	function __THEME_SLUG___page_title()
 	{
 		ob_start();
 		if (is_front_page()) {
@@ -150,8 +150,8 @@ if (!function_exists('__THEME_SLUG__page_title')) {
 }
 
 /* Page breadcrumb */
-if (!function_exists('__THEME_SLUG__page_breadcrumb')) {
-	function __THEME_SLUG__page_breadcrumb($home_text = 'Home', $delimiter = '-')
+if (!function_exists('__THEME_SLUG___page_breadcrumb')) {
+	function __THEME_SLUG___page_breadcrumb($home_text = 'Home', $delimiter = '-')
 	{
 		global $post;
 
@@ -254,8 +254,8 @@ if (!function_exists('__THEME_SLUG__page_breadcrumb')) {
 }
 
 /* Display navigation to next/previous post */
-if (! function_exists('__THEME_SLUG__post_nav')) {
-	function __THEME_SLUG__post_nav()
+if (! function_exists('__THEME_SLUG___post_nav')) {
+	function __THEME_SLUG___post_nav()
 	{
 		$previous = (is_attachment()) ? get_post(get_post()->post_parent) : get_adjacent_post(false, '', true);
 		$next     = get_adjacent_post(false, '', false);
@@ -274,8 +274,8 @@ if (! function_exists('__THEME_SLUG__post_nav')) {
 }
 
 /* Display paginate links */
-if (! function_exists('__THEME_SLUG__paginate_links')) {
-	function __THEME_SLUG__paginate_links($wp_query)
+if (! function_exists('__THEME_SLUG___paginate_links')) {
+	function __THEME_SLUG___paginate_links($wp_query)
 	{
 		if ($wp_query->max_num_pages <= 1) {
 			return;
@@ -303,8 +303,8 @@ if (! function_exists('__THEME_SLUG__paginate_links')) {
 }
 
 /* Display navigation to next/previous set of posts */
-if (! function_exists('__THEME_SLUG__paging_nav')) {
-	function __THEME_SLUG__paging_nav()
+if (! function_exists('__THEME_SLUG___paging_nav')) {
+	function __THEME_SLUG___paging_nav()
 	{
 		if ($GLOBALS['wp_query']->max_num_pages < 2) {
 			return;
@@ -352,8 +352,8 @@ if (! function_exists('__THEME_SLUG__paging_nav')) {
  * 
  * Adds a back to top button to the footer
  */
-if (!function_exists('__THEME_SLUG__back_to_top')) {
-	function __THEME_SLUG__back_to_top()
+if (!function_exists('__THEME_SLUG___back_to_top')) {
+	function __THEME_SLUG___back_to_top()
 	{
 	?>
 		<a href="#" class="bt-back-to-top">
@@ -364,4 +364,4 @@ if (!function_exists('__THEME_SLUG__back_to_top')) {
 		<?php
 	}
 }
-add_action('wp_footer', '__THEME_SLUG__back_to_top', 99);
+add_action('wp_footer', '__THEME_SLUG___back_to_top', 99);

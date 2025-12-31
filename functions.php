@@ -1,7 +1,7 @@
 <?php
 /* Register Sidebar */
-if (!function_exists('__THEME_SLUG__register_sidebar')) {
-	function __THEME_SLUG__register_sidebar()
+if (!function_exists('__THEME_SLUG___register_sidebar')) {
+	function __THEME_SLUG___register_sidebar()
 	{
 		register_sidebar(array(
 			'name' => esc_html__('Main Sidebar', '__TEXT_DOMAIN__'),
@@ -12,11 +12,11 @@ if (!function_exists('__THEME_SLUG__register_sidebar')) {
 			'after_title' => '</h4>',
 		));
 	}
-	add_action('widgets_init', '__THEME_SLUG__register_sidebar');
+	add_action('widgets_init', '__THEME_SLUG___register_sidebar');
 }
 
 /* Get icon SVG HTML */
-function __THEME_SLUG__get_icon_svg_html( $icon_file_name ) {
+function __THEME_SLUG___get_icon_svg_html( $icon_file_name ) {
     if ( empty( $icon_file_name ) ) {
         return 'Error: Invalid file name or file name is missing.';
     }
@@ -38,8 +38,8 @@ function __THEME_SLUG__get_icon_svg_html( $icon_file_name ) {
 }
 
 /* Enqueue Script */
-if (!function_exists('__THEME_SLUG__enqueue_scripts')) {
-	function __THEME_SLUG__enqueue_scripts()
+if (!function_exists('__THEME_SLUG___enqueue_scripts')) {
+	function __THEME_SLUG___enqueue_scripts()
 	{
 		wp_enqueue_style('__THEME_SLUG__-fonts', get_template_directory_uri() . '/assets/css/fonts.css',  array(), false);
 
@@ -81,18 +81,18 @@ if (!function_exists('__THEME_SLUG__enqueue_scripts')) {
 
 		wp_enqueue_script('__THEME_SLUG__-main');
 	}
-	add_action('wp_enqueue_scripts', '__THEME_SLUG__enqueue_scripts');
+	add_action('wp_enqueue_scripts', '__THEME_SLUG___enqueue_scripts');
 }
 /* Add Stylesheet And Script Backend */
-if (!function_exists('__THEME_SLUG__enqueue_admin_scripts')) {
-	function __THEME_SLUG__enqueue_admin_scripts($hook)
+if (!function_exists('__THEME_SLUG___enqueue_admin_scripts')) {
+	function __THEME_SLUG___enqueue_admin_scripts($hook)
 	{
 		wp_enqueue_style('__THEME_SLUG__-fonts', get_template_directory_uri() . '/assets/css/fonts.css',  array(), false);
 		wp_enqueue_script('__THEME_SLUG__-admin-main', get_template_directory_uri() . '/assets/js/admin-main.js', array('jquery'), '', true);
 		wp_enqueue_style('__THEME_SLUG__-admin-main', get_template_directory_uri() . '/assets/css/admin-main.css', array(), false);
 
 	}
-	add_action('admin_enqueue_scripts', '__THEME_SLUG__enqueue_admin_scripts');
+	add_action('admin_enqueue_scripts', '__THEME_SLUG___enqueue_admin_scripts');
 }
 
 /* Template functions */
