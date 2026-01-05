@@ -119,6 +119,7 @@ Use the table below when adding or replacing template variables in files (style 
 | `__THEME_SLUG__`      | Theme slug (kebab-case)              | `wp-theme-template` |
 | `__THEME_SLUG_FLAT__` | Theme slug without separators (flat) | `wpthemetemplate`   |
 | `__THEME_NAME__`      | Theme display name                   | `WP Theme Template` |
+| `__THEME_URI__`       | URL of the interface's public website| `WP Theme Template` |
 | `__NAMESPACE__`       | PHP namespace (PascalCase)           | `WpThemeTemplate`   |
 | `__TEXT_DOMAIN__`     | Translation text domain              | `wp-theme-template` |
 
