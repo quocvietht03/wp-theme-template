@@ -36,10 +36,10 @@ if ($background_color || $background_image) {
         <?php
         $home_text = 'Home';
         $delimiter = '/';
-        echo __THEME_SLUG___page_breadcrumb($home_text, $delimiter);
+        echo __THEME_SLUG_FLAT___page_breadcrumb($home_text, $delimiter);
         ?>
       </div>
-      <h1 class="bt-page-titlebar--title"><?php echo __THEME_SLUG___page_title(); ?></h1>
+      <h1 class="bt-page-titlebar--title"><?php echo __THEME_SLUG_FLAT___page_title(); ?></h1>
     </div>
   </div>
 </section>
