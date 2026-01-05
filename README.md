@@ -21,8 +21,8 @@ This theme provides a minimal, well-organized starting point with Sass-based sty
 
 ## Requirements
 
-- WordPress 5.0+ (recommended)
-- PHP 7.4+ (or newer)
+- WordPress 6.9+ (recommended)
+- PHP 8.0+ (or newer)
 - Node.js and npm (used for compiling Sass and other asset tooling)
 
 ## Installation

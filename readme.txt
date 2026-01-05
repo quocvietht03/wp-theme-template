@@ -8,8 +8,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, two-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-images, flexible-header, full-width-template, style-variations, sticky-post, theme-options, translation-ready
 Description: __THEME_NAME__ is a fully configurable and easy to use responsive WordPress Theme  with a lot of great features.
 Text Domain: __TEXT_DOMAIN__
-REQUIRED Requires PHP: 7.0 
-REQUIRED Tested up to: 5.5
+REQUIRED Requires PHP: 8.0 
+REQUIRED Tested up to: 6.9
 Copyright 2026 bearsthemes. All rights reserved.
 
 == Installation ==
