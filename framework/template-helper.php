@@ -59,12 +59,20 @@ add_action('after_setup_theme', '__THEME_SLUG_FLAT___setup');
 
 /* Logo */
 if (!function_exists('__THEME_SLUG_FLAT___logo')) {
-	function __THEME_SLUG_FLAT___logo($url = '', $height = 30)
+	function __THEME_SLUG_FLAT___logo($url = '', $height = 60)
 	{
-		if (!$url) {
-			$url = get_template_directory_uri() . '/assets/images/site-logo.png';
-		}
-		echo '<a href="' . esc_url(home_url('/')) . '"><img class="logo" style="height: ' . esc_attr($height) . 'px; width: auto;" src="' . esc_url($url) . '" alt="' . esc_attr__('Logo', '__TEXT_DOMAIN__') . '"/></a>';
+		?>
+		<a class="bt-site-logo--link" href="<?php echo esc_url(home_url('/')); ?>">
+			<?php 
+			if (!$url) { 
+				$blog_title = get_bloginfo();
+				echo '<span class="bt-site-logo--text">' . esc_html($blog_title) . '</span>';
+			} else {
+				echo '<img class="bt-site-logo--img" style="height: ' . esc_attr($height) . 'px; width: auto;" src="' . esc_url($url) . '" alt="' . esc_attr__('Logo', '__TEXT_DOMAIN__') . '"/>';
+			}
+			?>
+		</a>
+		<?php
 	}
 }
 

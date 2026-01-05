@@ -16,11 +16,7 @@
           if (has_custom_logo()) {
             the_custom_logo();
           } else {
-          ?>
-            <a href="<?php echo esc_url(home_url('/')); ?>">
-              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/site-logo.png'); ?>" alt="__THEME_NAME__ Logo" />
-            </a>
-          <?php
+            __THEME_SLUG_FLAT___logo();
           }
           ?>
         </div>
