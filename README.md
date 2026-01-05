@@ -73,34 +73,17 @@ your-theme-template/
 ├── rtl.css
 ├── assets/
 │   ├── css/
-│   │   ├── admin-main.css
-│   │   ├── fonts.css
-│   │   └── main.css
 │   ├── images/                # Theme images and icons
 │   ├── js/
-│   │   ├── admin-main.js
-│   │   └── main.js
 │   ├── libs/
-│   │   ├── jquery-validate/
-│   │   │   └── jquery.validate.min.js
-│   │   └── select2/
-│   │       ├── select2.min.css
-│   │       └── select2.min.js
 │   └── sass/
-│       ├── main.scss
-│       ├── admin-main.scss
-│       └── (partials .scss files)
 ├── framework/
 │   ├── acf-options.php
 │   ├── block-load.php
 │   ├── template-helper.php
 │   ├── widget-load.php
 │   ├── acf-options/
-│   │   ├── group_65274f52d2053.json
-│   │   ├── group_6530e5259c0aa.json
-│   │   └── group_653a2b5c4e16b.json
 │   ├── block-parts/
-│   │   └── widget-recent-posts.php
 │   ├── templates/
 │   │   ├── post-card.php
 │   │   ├── post-helper.php
@@ -109,12 +92,6 @@ your-theme-template/
 │   │   ├── post-related.php
 │   │   └── post.php
 │   └── widgets/
-│       ├── frontend.js
-│       ├── mobile-menu/widget.php
-│       ├── page-breadcrumb/widget.php
-│       ├── site-copyright/widget.php
-│       ├── site-information/widget.php
-│       └── site-social/widget.php
 └── languages/
 	└── __THEME_SLUG__.pot
 ```
