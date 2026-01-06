@@ -148,8 +148,6 @@
 	
 	jQuery(window).on('resize', function () {
 		__NAMESPACE__SubmenuAuto();
-		__NAMESPACE__UpdateBodyWidthVariable();
-		__NAMESPACE__HandleGridViewResize();
 	});
 	
 	jQuery(window).on('scroll', function () {
