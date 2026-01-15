@@ -84,7 +84,7 @@ class ElementorWidgets
 		// https://developer.wordpress.org/reference/functions/wp_register_script/
 		// wp_register_script( $handle, $src, $deps, $ver, $args );
 
-		wp_register_script('__THEME_SLUG__-widgets',  get_stylesheet_directory_uri() . '/framework/widgets/frontend.js', ['jquery'], '', true);
+		wp_register_script('__THEME_SLUG__-widgets',  get_template_directory_uri() . '/framework/widgets/frontend.js', ['jquery'], '', true);
 	}
 
 	/**
@@ -99,7 +99,7 @@ class ElementorWidgets
 	{
 
 		foreach ( $this->widgets_list() as $widget ) {
-			$widget_file = get_stylesheet_directory() . '/framework/widgets/' . $widget . '/widget.php';
+			$widget_file = get_template_directory() . '/framework/widgets/' . $widget . '/widget.php';
 			
 			// Only require if file exists and class is not already declared
 			if ( file_exists( $widget_file ) && ! class_exists( $widget ) ) {
@@ -107,7 +107,7 @@ class ElementorWidgets
 			}
 
 			// Include skins safely
-			$skins_path = get_stylesheet_directory() . '/framework/widgets/' . $widget . '/skins/';
+			$skins_path = get_template_directory() . '/framework/widgets/' . $widget . '/skins/';
 			foreach ( glob( $skins_path . '*.php' ) as $filepath ) {
 				if ( file_exists( $filepath ) ) {
 					include $filepath;
