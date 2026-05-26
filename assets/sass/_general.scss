@@ -154,6 +154,13 @@
   }
 }
 
+.wp-has-aspect-ratio .wp-block-embed__wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #f6f6f4;
+  padding-bottom: 46.5%;
+}
+
 .bt-ab-center {
   position: absolute;
   top: 50%;
@@ -308,7 +315,7 @@
       font-size: 22px;
     }
   }
-  ul {
+  ul:not(.wp-block-page-list, .wp-block-post-template, .wp-block-social-links, .wp-block-latest-posts) {
     padding: 0;
     list-style: none;
     margin-bottom: 16px;
@@ -334,7 +341,7 @@
       }
     }
   }
-  ol {
+  ol:not(.wp-block-comment-template, .wp-block-latest-comments) {
     list-style: none;
     counter-reset: bt-awesome-counter;
     padding-left: 0;
